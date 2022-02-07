@@ -1,0 +1,57 @@
+*,
+*::after,
+*::before {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	min-height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: #e7e7e7;
+}
+
+.toggle {
+	height: 90px;
+	width: 90px;
+	border-radius: 15px;
+	background: #e7e7e7;
+	box-shadow: 7px 7px 13px #cecece, -8px -8px 15px #ffffff;
+	cursor: pointer;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transition: 0.5s;
+}
+
+.toggle span {
+	width: 50px;
+	height: 5px;
+	border-radius: 5px;
+	background: #0000009c;
+	box-shadow: 0 15px 0 #0000009c, 0 -15px 0 #0000009c;
+	transition: 0.5s;
+}
+
+.toggle.active {
+	border-radius: 50%;
+}
+
+.toggle.active span {
+	transform: rotate(45deg);
+	box-shadow: none;
+}
+
+.toggle.active span::after {
+	content: "";
+	width: 50px;
+	height: 5px;
+	border-radius: 5px;
+	background: red;
+	position: absolute;
+	transform: rotate(90deg);
+	background: #00000080;
+}
